@@ -46,7 +46,7 @@ main{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
     width: 70%;
     height: 100%;
     margin: auto;

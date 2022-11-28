@@ -1,6 +1,19 @@
 <template>
 	<header>
         <img src="../assets/SptifyLogo.png" alt="Logo">
+        <div>
+            <!-- Selezione per Genere -->
+            <select name="genere" id="selezioneGenere">
+                <option value="">Seleziona il genere preferito</option>
+                <option value=""></option>
+            </select>
+
+            <!-- Selezione per autore -->
+            <select name="autore" id="selezioneAutore">
+                <option value="">Seleziona l'autore</option>
+                <option value=""></option>
+            </select>
+        </div>
     </header>
 </template>
 
@@ -18,8 +31,19 @@
         height: 10%;
         background-color: rgba(46, 58, 70, 1);
         padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     img{
         height: 100%
+    }
+    select{
+        padding: 10px 25px;
+        font-size: 20px;
+        margin-right: 20px;
+        background-color: lightblue;
+        border: none;
+        border-radius: 10px;
     }
 </style>

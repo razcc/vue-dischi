@@ -33,19 +33,20 @@ export default {
 				console.log(this.datiDischi);
 
 				this.datiDischi.forEach((element) => {
-
-                    // Creazione array con generi
+					// Creazione array con generi
 					if (!this.arrGeneri.includes(element.genre)) {
 						this.arrGeneri.push(element.genre);
 					}
 
-                    // Creazione array con autori
+					// Creazione array con autori
 					if (!this.arrAutori.includes(element.author)) {
 						this.arrAutori.push(element.author);
 					}
 				});
 			});
 
+            this.$emit('emitGeneri', this.arrGeneri)
+            this.$emit('emitAutori', this.arrAutori)
 
 	},
 };

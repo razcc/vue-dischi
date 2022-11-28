@@ -5,7 +5,7 @@
             <!-- Selezione per Genere -->
             <select name="genere" id="selezioneGenere">
                 <option value="">Seleziona il genere preferito</option>
-                <option value=""></option>
+                <option value="">{{propsGeneri}}</option>
             </select>
 
             <!-- Selezione per autore -->
@@ -21,7 +21,10 @@
 
     export default {
         name: 'HeaderComp',
-        
+        props: {
+            propsGeneri: Array,
+            propsAutori: Array
+        }       
     }
 </script>
 

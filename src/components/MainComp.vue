@@ -26,8 +26,9 @@ export default {
 			this.arrAutoriMain = valEmitAutori;
 		},
 	},
-	beforeUnmounted() {
+	mounted() {
 		this.$emit("emitGeneriMain", this.arrGeneriMain);
+        console.log(this.$emit("emitGeneriMain", this.arrGeneriMain))
 		this.$emit("emitAutoriMain", this.arrAutoriMain);
 	},
 };

@@ -5,13 +5,13 @@
             <!-- Selezione per Genere -->
             <select name="genere" id="selezioneGenere">
                 <option value="">Seleziona il genere preferito</option>
-                <option value="">{{propsGeneri}}</option>
+                <option v-for="(elem, index) in propsGeneri"  :key="index" :value="elem">{{elem}}</option>
             </select>
 
             <!-- Selezione per autore -->
             <select name="autore" id="selezioneAutore">
                 <option value="">Seleziona l'autore</option>
-                <option value=""></option>
+                <option v-for="(elem, index) in propsAutori"  :key="index" value="elem">{{elem}}</option>
             </select>
         </div>
     </header>
@@ -21,6 +21,9 @@
 
     export default {
         name: 'HeaderComp',
+        data(){
+
+        },
         props: {
             propsGeneri: Array,
             propsAutori: Array

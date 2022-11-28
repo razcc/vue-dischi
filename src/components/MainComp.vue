@@ -9,10 +9,17 @@ import AlbumsComp from "./albums/AlbumsComp.vue";
 
 export default {
 	name: "MainComp",
+	props: {
+		propsSceltaGenere: String,
+		propsSceltaAutore: String,
+	},
 	data() {
 		return {
 			arrGeneriMain: [],
 			arrAutoriMain: [],
+            sceltaGen: "",
+            sceltaAutore: ""
+            
 		};
 	},
 	components: {
@@ -28,9 +35,16 @@ export default {
 	},
 	mounted() {
 		this.$emit("emitGeneriMain", this.arrGeneriMain);
-        console.log(this.$emit("emitGeneriMain", this.arrGeneriMain))
 		this.$emit("emitAutoriMain", this.arrAutoriMain);
+       
+       
+        
 	},
+    updated(){
+        this.sceltaGen = this.propsSceltaGenere;
+        console.log(this.sceltaGen )
+
+    }
 };
 </script>
 

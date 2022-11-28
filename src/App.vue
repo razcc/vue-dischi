@@ -3,11 +3,16 @@
 		<HeaderComp
 			:propsGeneri="arrGeneriApp"
 			:propsAutori="arrAutoriApp"
+			@sceltaGenere="sceltaGenereFunction"
+			@sceltaUtente="sceltaAutoreFunction"
+			
 
 		/>
 		<MainComp
 			@emitGeneriMain="methodsGeneriApp"
 			@emitAutoriMain="methodsAutoriApp"
+			:propsSceltaGenere="sceltaGenere"
+			:propsSceltaAutore="sceltaAutore"
 		/>
 	</div>
 </template>
@@ -22,6 +27,8 @@ export default {
 		return {
 			arrGeneriApp: [],
 			arrAutoriApp: [],
+			sceltaGenere: "",
+			sceltaAutore: "",
 		};
 	},
 	components: {
@@ -34,6 +41,12 @@ export default {
 		},
 		methodsAutoriApp(valEmitAutoriApp) {
 			this.arrAutoriApp = valEmitAutoriApp;
+		},
+		sceltaGenereFunction(valEmitSceltaGenere) {
+			this.sceltaGenere = valEmitSceltaGenere;
+		},
+		sceltaAutoreFunction(valEmitSceltaAutore) {
+			this.sceltaAutore = valEmitSceltaAutore;
 		},
 	},
 };

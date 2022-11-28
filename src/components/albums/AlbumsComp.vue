@@ -28,9 +28,7 @@ export default {
 		axios
 			.get("https://flynn.boolean.careers/exercises/api/array/music")
 			.then((response) => {
-				console.log(response.data.response);
 				this.datiDischi = response.data.response;
-				console.log(this.datiDischi);
 
 				this.datiDischi.forEach((element) => {
 					// Creazione array con generi

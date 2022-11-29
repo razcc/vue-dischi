@@ -1,6 +1,6 @@
 <template>
 	<main>
-		<AlbumsComp @emitGeneri="methodsGeneri" @emitAutori="methodsAutori" />
+		<AlbumsComp :props1Genere="propsSceltaGenere" :props2Autore="propsSceltaAutore"  @emitGeneri="methodsGeneri" @emitAutori="methodsAutori" />
 	</main>
 </template>
 
@@ -17,9 +17,8 @@ export default {
 		return {
 			arrGeneriMain: [],
 			arrAutoriMain: [],
-            sceltaGen: "",
-            sceltaAutore: ""
-            
+			sceltaGen: this.propsSceltaGenere,
+			
 		};
 	},
 	components: {
@@ -36,15 +35,8 @@ export default {
 	mounted() {
 		this.$emit("emitGeneriMain", this.arrGeneriMain);
 		this.$emit("emitAutoriMain", this.arrAutoriMain);
-       
-       
-        
 	},
-    updated(){
-        this.sceltaGen = this.propsSceltaGenere;
-        console.log(this.sceltaGen )
-
-    }
+	
 };
 </script>
 

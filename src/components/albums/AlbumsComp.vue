@@ -14,6 +14,10 @@ import axios from "axios";
 
 export default {
 	name: "AlbumsComp",
+	props: {
+		props1Genere: String,
+		props2Autore: String
+	},
 	components: {
 		CardComp,
 	},
